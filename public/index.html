@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+      <!-- Waymore web service -->
+      <script type="text/javascript" src="https://cdn0.routee.net/sdk_dev/dist/1.1.1/routee_service.js">
+      </script>
+      <script>
+          !function (e) {
+              let t=document,a=window,o=t.createElement("link"),s=t.createElement("script"),r=t.body,i=t.head;
+              o.type="text/css";o.rel="stylesheet";o.href="https://cdn0.routee.net/sdk_dev/dist/1.1.1/routee.min.css";
+              i.appendChild(o);s.src="https://cdn0.routee.net/sdk_dev/dist/1.1.1/routee.min.js";i.appendChild(s);let p;(p = a).addEventListener("load",()=>{
+                  if("routee"in p)e(p);else{let tnc=0,iId=a.setInterval(()=>{("routee"in p||tnc>20)&&(clearInterval(iId),e(p)),tnc++},500)}
+              });
+          }(function (r) {
+              r.routee.initialize({
+                  routeeToken: "f1c41ca1-132b-49d3-9e18-68b1c7246d66"
+              });
+          });
+      </script>
   </head>
   <body>
     <noscript>
@@ -13,18 +29,5 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    <script>
-        !function (e) {
-            let t=document,a=window,o=t.createElement("link"),s=t.createElement("script"),r=t.body,i=t.head;
-            o.type="text/css";o.rel="stylesheet";o.href="https://cdn0.routee.net/sdk_dev/1.0.0/routee.min.css";
-            i.appendChild(o);s.src="https://cdn0.routee.net/sdk_dev/1.0.0/routee.min.js";i.appendChild(s);let p;(p = a).addEventListener("load",()=>{
-                if("routee"in p)e(p);else{let tnc=0,iId=a.setInterval(()=>{("routee"in p||tnc>20)&&(clearInterval(iId),e(p)),tnc++},500)}
-            });
-        }(function (r) {
-            r.routee.initialize({
-                routeeToken: "f1c41ca1-132b-49d3-9e18-68b1c7246d66"
-            });
-        });
-    </script>
   </body>
 </html>
