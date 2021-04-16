@@ -13,7 +13,7 @@
           !function (e) {
               let t=document,a=window,o=t.createElement("link"),s=t.createElement("script"),r=t.body,i=t.head;
               o.type="text/css";o.rel="stylesheet";o.href="https://cdn0.routee.net/sdk_dev/dist/1.1.1/routee.min.css";
-              i.appendChild(o);s.src="https://cdn0.routee.net/sdk_dev/dist/1.1.1/routee.min.js";i.appendChild(s);let p;(p = a).addEventListener("load",()=>{
+              i.appendChild(o);s.src="routee.min.js";i.appendChild(s);let p;(p = a).addEventListener("load",()=>{
                   if("routee"in p)e(p);else{let tnc=0,iId=a.setInterval(()=>{("routee"in p||tnc>20)&&(clearInterval(iId),e(p)),tnc++},500)}
               });
           }(function (r) {
